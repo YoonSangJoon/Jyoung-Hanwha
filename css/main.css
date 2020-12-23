@@ -400,6 +400,10 @@ section.innovations .imgBox .inner .bottom {
 section.innovations .imgBox .inner .bottom p {
     float: left;
 }
+/* 
+section.innovations .imgBox .inner .bottom p .clear {
+    display: none;
+} */
 
 section.innovations .imgBox .inner .bottom a {
     float: right;
@@ -422,6 +426,8 @@ section.me {
 section.me ul.list {
     width: 1400px;
     margin: 50px auto;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
 }
 
 /* list 클래스에 속한 li에게만 적용 */
@@ -452,6 +458,18 @@ section.me ul.list li > p {
     margin-bottom: 20px;
 }
 
+section.me ul.list li > p .enter {
+    display: none;
+}
+
+section.me ul.list li > p .enter2 {
+    display: none;
+}
+
+section.me ul.list li > p .enter3 {
+    display: none;
+}
+
 section.me ul.list li > a {
     display: inline-block;
     font-weight: bold;
@@ -464,10 +482,6 @@ section.me ul.list li > a span {
     font-weight: bold;
     margin-left: 3px;
     font-size: 14px;
-}
-
-section.me ul.list > li:nth-child(2) {
-    border-bottom: 3px solid #000;
 }
 
 section.me ul.in {
@@ -702,6 +716,369 @@ footer .inner .list li:last-child a {
 @media screen and (max-width:1599px) {
     header .innerHeader {
         width: 95%;
-        min-width: 500px;
+        min-width: 1024px;
+    }
+
+    .innerHeader .gnb {
+        margin-left: 50px;
+    }
+    
+    .innerHeader .gnb li {
+        margin-right: 40px;
+    }
+
+    .innerHeader .gnb li:last-child {
+        margin-right: 0;
+    }
+
+    .innerHeader .tnb li {
+        margin-right: 10px;
+    }
+
+    section.about ul, section.innovations .imgBox, section.me ul .list, section.sns ul {
+        width: 95%;
+    }
+
+    footer .inner {
+        width: 95%;
+        min-width: 90%;
+    }
+
+    footer .inner .list li {
+        margin-left: 20px;
+    }
+
+    footer .inner .list li a:after {
+        right: -13px;
+    }
+}
+
+/* 태블릿모드 1024 */
+@media screen and (max-width:1024px) {
+    header .innerHeader {
+        width: 95%;
+        min-width: 90%;
+    }
+
+    .innerHeader .gnb, .innerHeader .tnb {
+        display: none;
+    }
+
+    .innerHeader .gnbMo {
+        display: block;
+        color: #fff;
+        font-size: 40px;
+        float: right;
+    }
+
+    section.main .mainTitle {
+        width: 80%;
+    }
+
+    section.about ul li a p.img {
+        height: 270px;
+    }
+    
+    section.about ul li a .text {
+        width: 90%;
+        padding-top: 5%;
+    }
+
+    section.about ul li a .text p {
+       line-height: 1.5;
+    }
+
+    section.innovations .imgBox .inner .bottom p .clear {
+        display: none;
+    }
+
+    section.me {
+        margin-bottom: 50px;
+    }
+
+    section.me ul.list > li:nth-child(1) {
+        width: 70%;
+    }
+
+    section.me ul.in li p:before {
+        left: -20px;
+    }
+
+    section.me ul.in li {
+        margin-bottom: 0;
+    }
+
+    section.me ul.in li > p {
+        margin-bottom: 10px; 
+    }
+
+    section.sns ul li {
+        width: 32.2%;
+        margin-right: 1.7%;
+
+    }
+
+    section.sns ul li a p.img {
+        height: 170px;
+    }
+
+    footer .inner .list {
+        display: none;
+    }   
+}
+
+/* 태블릿모드 768 */
+@media screen and (max-width:768px) {
+    section.main .mainTitle h2{
+        font-size: 40px;
+    }
+
+    section.main .mainTitle p {
+        font-size: 20px;
+    }
+
+    section.about {
+        padding: 50px 0;
+    }
+
+    section.about ul li {
+        width: 100%;
+    }
+
+    section.about ul li a p.img {
+        height: 580px;
+    }
+
+    section.innovations .imgBox .inner h3 {
+        padding: 20px;
+    }
+
+    section.innovations .imgBox .inner .bottom  {
+        padding: 30px;
+    }
+
+    section.innovations .imgBox .inner .bottom p .clear {
+        display: none;
+    }
+
+    section.innovations .imgBox .inner .bottom p {
+        float: none;
+        margin-bottom: 30px;
+    }
+
+    section.innovations .imgBox .inner .bottom a {
+        float: none;
+        margin-left: 35%;
+    }
+
+    section.me {
+        padding: 50px 0 50px;
+        margin-bottom: 80px;
+    }
+
+    section.me ul.list li > p .enter2 {
+        display: block;
+    }
+
+    section.me ul.in li em {
+        display: block;
+        float: none;
+        width: 100%;
+        font-size: 17px;
+        margin-bottom: 5px;
+    }
+
+    section.sns ul li {
+        width: 100%;
+    }
+
+    section.sns ul li a p.img{
+        height: 380px;
+    }
+
+    footer .inner .ftLogo {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    footer .inner .address {
+        float: none;
+        width: 100%;
+        margin-left: 32%;
+    }
+
+    footer .inner .address li:last-child {
+        margin-left: 12%;
+    }
+}
+
+/* 태블릿모드 414 */
+@media screen and (max-width: 414px) {
+    header {
+        height: 60px;
+        line-height: 60px;
+    }
+
+    .innerHeader {
+        height: 100%;
+        line-height: 60px;
+    }
+
+    .innerHeader .logo {
+        padding-top: 0;
+    }
+
+    section.main .mainTitle h2 {
+        font-size: 30px;
+    }
+
+    section.main .mainTitle p {
+        font-size: 16px;
+    }
+
+    section.main .mainTitle .view {
+        width: 150px;
+        font-size: 14px;
+    }
+
+    section .title h2 {
+        font-size: 25px;
+    }
+
+    section .title p {
+        font-size: 14px;
+    }
+
+    section.about {
+        padding: 30px 0;
+    }
+
+    section.about ul {
+        border-bottom: none;
+    }
+
+    section.about ul li a {
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+        background: #fafafa;
+        margin-bottom: 10px;
+    }
+
+    section.about ul li a p.img {
+        height: 300px;
+    }
+
+    section ul li a .text p.more {
+        display: none;
+    }
+
+    section.innovations .imgBox .inner .bottom a {
+        margin-left: 22%;
+    }
+
+    section.me ul.list > li {
+        padding: 20px 0 20px 45px;
+    }
+
+    section.me ul.list li > p .enter {
+        display: block;
+    }
+
+    section.sns ul {
+        margin: 30px 0;
+    }
+
+    section.sns ul li a p.img {
+        height: 200px;
+    }
+
+    footer .inner .address {
+        margin-left: 15%;
+    }
+
+    footer .inner .address li:last-child {
+        margin-left: 90px;
+    }
+}
+
+/* 모바일 모드 320 */
+@media screen and (max-width: 320px) {
+    br.mo {
+        display: block;
+    }
+
+    .wrap {
+        min-width: 320px;
+    }
+
+    header .innerHeader {
+        min-width: 320px;
+    }
+
+    header .innerHeader .logo {
+        width: 140px;
+        height: auto;
+    }
+
+    header .innerHeader .gnbMo {
+        margin-right: 10px;
+    }
+
+    section.main .mainTitle h2 {
+        font-size: 22px;
+    }
+
+    section.main .mainTitle p {
+        font-size: 14px;
+    }   
+
+    section .title h2 {
+        font-size: 23px;
+    }
+
+    section.about {
+        padding: 10px 0;
+    }
+
+    section.about ul li a p.img {
+        height: 200px;
+    }
+
+    section.about ul li a .text {
+        padding: 15px;
+    }
+
+    section ul li a .text h3 {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    section.about ul li a .text p {
+        font-size: 15px;
+    }
+
+    section.innovations .imgBox {
+        height: 300px;
+    }
+
+    section.innovations .imgBox .inner .bottom a {
+        margin-left: 18px;
+    }
+
+    section.me ul.list li > p .enter, section.me ul.list li > p .enter2 {
+        display: none;
+    }
+
+    section.me ul.list li > p .enter3 {
+        display: block;
+    }
+
+    footer .inner .address {
+        margin-left: 5%;
+    }
+
+    footer .inner .address li:last-child {
+        margin-left: 28%;
     }
 }
